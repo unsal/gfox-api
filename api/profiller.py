@@ -22,7 +22,8 @@ class ProfillerApi():
             for row in data:
                 dict.append({'id':row.id, 'name':row.name,'timestamp':row.timestamp})
 
-            _json = jsonify({"Profiller":dict})
+            # _json = jsonify({"Profiller":dict})
+            _json = jsonify(dict)
 
             if (len(dict) == 0):
                 return Response("NO DATA found!")
